@@ -8,12 +8,17 @@ var selectedFeature = {};	// feature selected by drawing
 var map; // the map object
 
 var startDate = new Date(); 		// animation part
-startDate.setUTCHours(0, 0, 0, 0); 	// animation part
+
 var timeDimension; 					// animation part
 var gpxLayer;
-initializeMap()
-initLeafleatDraw()
-initLeafletTime()
+
+$(window).on('load', function () {
+	startDate.setUTCHours(0, 0, 0, 0); 	// animation part
+	initializeMap()
+	initLeafleatDraw()
+	initLeafletTime()
+});
+
 // Panes are DOM elements used to control the ordering of layers on the map.
 
 
